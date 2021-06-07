@@ -32,3 +32,10 @@ An example of use is having soldiers that are lying down in a trench pop up to f
 To use place a trigger covering the soldiers that are to be affected, set it to activate on these soldier's side present, and put ```[thislist] call trubb_fnc_kneel/stand;``` in the on activation field of the trigger.  
 
 The condition can be for example a trigger: in the trigger you placed put ```triggerActivated yourtrigger``` or your custom condition as what activates the functions.
+
+### combatzone
+Script to create a polygon limiting the play-area. Original by Tuntematon of Arma Finland. Adjust `_marker_count` in `script\combatzone.sqf` and place an equal amount of markers named `border_n`.
+
+### tun_loadscreen
+A script creating a short wait time between loading screen and mission start to accomodate for players having varying computers and internet connections. Disabled in singleplayer for testing purposes.
+By Tuntematon from Arma Finland.

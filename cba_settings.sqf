@@ -34,101 +34,56 @@ force ace_map_gestures_enabled = true;                  // Allow pointing in the
 
 /*************** ACE Medical ***************/
 /* AI specific */
-force ace_medical_ai_enabledFor = 0;                        // Medical system not enabled for AI
-force ace_medical_AIDamageThreshold = 0.8;                  // AI can take x damage
-force ace_medical_statemachine_AIUnconsciousness = false;   // Can AI go unconscious
-force ace_medical_statemachine_fatalInjuriesAI = 0;         // In what state can AI receive fatal damage?
-
-/* Players specific */
-force ace_medical_playerDamageThreshold = 1.2;              // Players can take x damage
-force ace_medical_statemachine_fatalInjuriesPlayer = 0;     // Fatal damage can be received in any state
-
-/* Fatal damage */
-force ace_medical_fatalDamageSource = 1;                    // Sum of damage count as fatal
-
-/* Cardiac arrest / CPR */
-force ace_medical_statemachine_cardiacArrestTime = 120;     // How many seconds it takes a unit to die if it enters cardiac arrest
-force ace_medical_treatment_cprSuccessChance = 0.6;         // How likely it is for CPR to succeed in restoring the heart rythm (0-1)
-force ace_medical_statemachine_cardiacArrestBleedoutEnabled = 1;    // Can bleed out when in cardiac arrest
-
-/* Pain settings */
-force ace_medical_painCoefficient = 1.2;                    // Pain is 1.2x base
-force ace_medical_feedback_painEffectType = 2;              // Force the use of the Chromatic Abberation pain effect
-
-/* Fractures / splints */
-force ace_medical_fractures = 1;                            // Fractures enabled, splints fully heal fractures
-force ace_medical_limping = 1;                              // Unbandaged wounds cause limping
-force ace_medical_fractureChance = 0.8;                     // 80% risk of a fracture-causing wound resulting in a fracture
-
-/* Bandage, drug, and diagnostic types */
-force ace_medical_treatment_allowSharedEquipment = 0;       // Patient's equipment will be used before that of the unit treating the patient
-force ace_medical_treatment_convertItems = 0;               // Convert vanilla IFAK/Medical Kit to ACE3 items
-force ace_medical_treatment_advancedBandages = true;        // Enables advanced bandages
-force ace_medical_treatment_advancedDiagnose = true;        // Enables advanced diagnose options (Check pulse/ blood pressure/ response)
-force ace_medical_treatment_advancedMedication = true;      // Advanced drugs, also enables use of Adenosine and Atropine
-force ace_medical_treatment_clearTraumaAfterBandage = false;// Bandaging does not "heal" the unit
-
-/* Blood I/O settings */
-force ace_medical_bleedingCoefficient = 0.8;                // Bleeding is slightly slower than normal
-force ace_medical_feedback_bloodVolumeEffectType = 0;       // Color fading effect when low on blood
-force ace_medical_ivFlowRate = 1;                           // Controls how quickly fluid flows out of IV bags. (time interval * IV CPS [4.1667mL/s] * this variable)
-force ace_medical_treatment_allowSelfIV = 1;                // Allows a unit to use IV bags on themself
-force ace_medical_treatment_medicIV = 1;                    // only medics or above can use IV
-force ace_medical_treatment_locationIV = 0;                 // IV can be given anywhere
-
-/* Objects on ground */
-force ace_medical_blood_bloodLifetime = 900;                // Blood remains on ground for 15 minutes
-force ace_medical_blood_enabledFor = 2;                     // Both players and AI create blood pools on the ground
-force ace_medical_blood_maxBloodObjects = 500;              // Max amount of blood pools
-force ace_medical_treatment_allowLitterCreation = true;     // Using medical equipment causes litter to spawn
-force ace_medical_treatment_maxLitterObjects = 500;         // Max amount of litter objects
-force ace_medical_treatment_litterCleanupDelay = 0;         // Amount of time until litter is considered for the garbage collector
-
-/* User interface */
-ace_medical_gui_enableActions = 0;                          // Enables medical actions in the interaction menu, allows player to select style
-force ace_medical_gui_enableSelfActions = true;             // Enables medical actions in the self interaction menu
-force ace_medical_gui_enableMedicalMenu = 1;                // Use of medical menu allowed
-force ace_medical_gui_maxDistance = 3;                      // Medical menu max range is 3 meters
-ace_medical_gui_openAfterTreatment = true;                  // Medical menu optionally reopens after treatment action finished
-ace_medical_gui_interactionMenuShowTriage = 1;              // Anyone can see triage card
-
-/* Unconsciousness / wakeup */
-force ace_medical_spontaneousWakeUpChance = 0.3;            // Probability a stable unit wakes up on their own (30% chance, checked every 15 seconds)
-force ace_medical_painUnconsciousChance = 0.2;              // 20% probability of a person going onconcious when pain above the tolerance threshold
-force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;    // Increases how often wake up checks happen when patient has epi in their system (multiplier)
-
-/* Wound reopening */
-force ace_medical_treatment_woundReopening = false;         // Wounds do not reopen
-force ace_medical_treatment_wounDreopenChance = 0.0;        // Wounds do not reopen
-force ace_medical_treatment_allowSelfStitch = 1;            // Allows a unit to use the Surgical Kit on themself
-
-/* Removal of PAK / Surgical Kit on use */
-force ace_medical_treatment_consumePAK = 0;                 // PAK will not be removed on use
-force ace_medical_treatment_consumeSurgicalKit = 0;         // Surgical Kit will not be removed on use
-force ace_medical_treatment_allowSelfPAK = 1;               // can PAK oneself
-
-/* Location-related settings */
-force ace_medical_treatment_locationEpinephrine = 0;        // Epi can be used anywhere
-force ace_medical_treatment_locationPAK = 0;                // PAK can be used anywhere
-force ace_medical_treatment_locationsBoostTraining = false; // Locations do not improve the medical skill of units
-force ace_medical_treatment_locationSurgicalKit = 0;        // Surgical kit can be used anywhere
-
-/* Access control */
-force ace_medical_treatment_medicEpinephrine = 0;           // Any unit can use Epi
-force ace_medical_treatment_medicPAK = 1;                   // Only medics can use PAK
-force ace_medical_treatment_medicSurgicalKit = 1;           // Only medics can use Surgical Kit
-force ace_medical_treatment_timeCoefficientPAK = 1.0;       // How long a PAK takes to apply, multiplied by this var (vartype double)
-force ace_medical_treatment_holsterRequired = 0;            // No holstering of weapons required to handle patients
-force ace_medical_treatment_allowBodyBagUnconscious = 0;    // DO NOT PUT LIVE PATIENTS IN BODY BAGS!
-
-/* Treatment times */
-force ace_medical_treatment_treatmentTimeAutoinjector = 5;  // self-explanatory
-force ace_medical_treatment_treatmentTimeBodyBag = 15;
-force ace_medical_treatment_treatmentTimeCPR = 15;
-force ace_medical_treatment_treatmentTimeIV = 12;
-force ace_medical_treatment_treatmentTimeSplint = 7;
-force ace_medical_treatment_treatmentTimeTourniquet = 7;
-force ace_medical_treatment_woundStitchTime = 5;
+force ace_medical_ai_enabledFor = 2;                      // Medical AI is Enabled for all clients and server
+force ace_medical_AIDamageThreshold = 0.8;                // The amount of damage an AI unit can take before dying.
+force ace_medical_bleedingCoefficient = 2;                // Coefficient for controlling the bleeding speed
+force ace_medical_blood_bloodLifetime = 900;              // Lifetime of blood drop objects
+force ace_medical_blood_enabledFor = 2;                   // Blood drops enabled for all units
+force ace_medical_blood_maxBloodObjects = 300;            // Maximum number of blood drop objects that can be spawned
+force ace_medical_fatalDamageSource = 2;                  // Either large hits to vital organs or sum of trauma can be fatal
+force ace_medical_feedback_bloodVolumeEffectType = 2;     // Low blood volume effect is Icon + Color Fading
+force ace_medical_feedback_painEffectType = 2;            // Pain effect type is Chromatic Aberation
+force ace_medical_fractureChance = 0.3;                   // The probability of a fracture causing wound resulting in a fracture
+force ace_medical_fractures = 1;                          // Splints Fully heal fractures
+force ace_medical_gui_enableMedicalMenu = 1;              // Enable medical menu.
+force ace_medical_gui_enableSelfActions = true;           // Enables medical actions for the Self Interaction Menu
+force ace_medical_gui_maxDistance = 3;                    // Maximum distance from which the Medical Menu can be opened
+force ace_medical_ivFlowRate = 3;                         // IV Transfusion Flow Rate
+force ace_medical_limping = 1;                            // Limp on Open Wounds
+force ace_medical_painCoefficient = 1.4;                  // Coefficient for controlling the intensity of pain adjustments
+force ace_medical_playerDamageThreshold = 0.8;            // The amount of damage a player unit can take before dying.
+force ace_medical_spontaneousWakeUpChance = 0.15;         // Unconscious Wake Up Chance
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 9;  // Epinephrine Wake Up Chance Boost
+force ace_medical_statemachine_AIUnconsciousness = false; // AI will not go unconscious for any reason, and therefore never enter cardiac arrest.
+force ace_medical_statemachine_cardiacArrestTime = 240;   // Controls how long it takes to die from cardiac arrest
+force ace_medical_statemachine_fatalInjuriesAI = 0;       // AI will always die instantly.
+force ace_medical_statemachine_fatalInjuriesPlayer = 1;   // Players can only receive fatal injuries when in Cardiac Arrest 
+force ace_medical_treatment_advancedBandages = 1;         // Advanced Bandages are Enabled and wounds Can NOT Reopen
+force ace_medical_treatment_advancedDiagnose = true;      // Enables the Check Pulse, Check Blood Pressure, and Check Response instead of generic Diagnose action.
+force ace_medical_treatment_advancedMedication = true;    // Enables extended, more in-depth medication handling
+force ace_medical_treatment_allowLitterCreation = true;   // Enables the creation of litter upon treatment
+force ace_medical_treatment_allowSelfIV = 1;              // Enables the use of IV transfusions on oneself.
+force ace_medical_treatment_allowSelfPAK = 1;             // Enables the use of PAKs to heal oneself
+force ace_medical_treatment_allowSelfStitch = 1;          // Enables the use of surgical kits to stitch oneself
+force ace_medical_treatment_allowSharedEquipment = 0;     // Use patient's equipment first
+force ace_medical_treatment_clearTraumaAfterBandage = false;// Fully bandaged body parts are not completely healed
+force ace_medical_treatment_consumePAK = 0;               // PAK is not consumed after use
+force ace_medical_treatment_consumeSurgicalKit = 0;       // Surgical Kit is not consumed after use
+force ace_medical_treatment_convertItems = 0;             // Convert vanilla medical items to ACE Medical items
+force ace_medical_treatment_cprSuccessChance = 0.75;      // Probability that CPR will be successful in restoring heart rhythm
+force ace_medical_treatment_holsterRequired = 0;          // Holstered weapon is not required to perform medical actions
+force ace_medical_treatment_litterCleanupDelay = 600;     // Litter lifetime is 600 seconds
+force ace_medical_treatment_locationEpinephrine = 0;      // Epinephrine can be used anywhere
+force ace_medical_treatment_locationPAK = 3;              // PAK can be used in vehicles and facilities
+force ace_medical_treatment_locationsBoostTraining = false;// Locations do not boost training
+force ace_medical_treatment_locationSurgicalKit = 0;      // Surgical Kit can be used Anywhere
+force ace_medical_treatment_maxLitterObjects = 200;       // Maximum number of litter objects which can be spawned
+force ace_medical_treatment_medicEpinephrine = 0;         // Anyone can administer epinephrine
+force ace_medical_treatment_medicIV = 1;                  // Only medic can set IVs
+force ace_medical_treatment_medicPAK = 1;                 // Only medic can use PAK
+force ace_medical_treatment_medicSurgicalKit = 1;         // Only medic can use Surgical Kit
+force ace_medical_treatment_timeCoefficientPAK = 1.5;     // Time Coefficient that Modifies how long a PAK takes to apply
+force ace_medical_treatment_woundReopenChance = 1;        // Wound Reopening Coefficient
 
 /*************** ACE Mortar ***************/
 force ace_mk6mortar_airResistanceEnabled = true;        // Mortar rounds are affected by air and wind
@@ -177,9 +132,9 @@ force tun_msp_enable = true;                                        // MSP enabl
 force tun_msp_progresbar_time_pack = 5;                             // Time taken for teardown
 force tun_msp_progresbar_time_setup = 5;                            // Time taken for setup
 force tun_msp_clasnames_civilian = "C_Truck_02_transport_F";        // Vehicles that civilians can use as MSP
-force tun_msp_clasnames_east = "rhs_gaz66_flat_vdv";                // Vehicles that REDFOR can use as MSP
-force tun_msp_clasnames_resistance = "I_Truck_02_transport_F";      // Vehicles that INDEP can use as MSP
-force tun_msp_clasnames_west = "UK3CB_TKA_B_RHIB";                  // Vehicles that BLUFOR can use as MSP
+force tun_msp_clasnames_east = "vn_o_wheeled_z157_02_nva65";                // Vehicles that REDFOR can use as MSP
+force tun_msp_clasnames_resistance = "vn_i_wheeled_m54_03";      // Vehicles that INDEP can use as MSP
+force tun_msp_clasnames_west = "vn_b_wheeled_m54_01";                  // Vehicles that BLUFOR can use as MSP
 force tun_msp_contested_radius_max = 50;                            // Radius where there needs to be more enemies than allies to disable MSP
 force tun_msp_contested_radius_min = 25;                            // Within this radius MSP is always disabled
 force tun_msp_report_enemies_range = 75;                            // Within which range enemies are reported as nearby ?
@@ -192,7 +147,7 @@ force tun_respawn_enable = true;                                    // Is respaw
 force tun_respawn_delayed_respawn = 0;                              // If remaining respawn time is less than x percent new deaths skip next wave
 force tun_respawn_killJIP = true;                                   // Kill players that JIP
 force tun_respawn_killJIP_time = 15;                                // Time from game start until from when JIPers are killed in minutes
-force tun_respawn_respawn_type = "default";                         // default: endless wave, "sidetickets": side tickets
+force tun_respawn_respawn_type = "sidetickets";                         // default: endless wave, "sidetickets": side tickets
 force tun_respawn_spectate_Cameramode_1st = true;                   // 1st person spectator camera
 force tun_respawn_spectate_Cameramode_3th = true;                   // 3rd person spectator camera
 force tun_respawn_spectate_Cameramode_free = true;                  // free spectator camera

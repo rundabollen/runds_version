@@ -1,6 +1,6 @@
 class Header{gameType =  Coop;};
 
-author = "Trubb | Anrop.se";
+author = "rund | Anrop.se";
 onLoadName = "";
 briefingName = "";
 loadScreen = "loadscreen.jpg";

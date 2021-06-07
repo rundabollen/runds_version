@@ -6,7 +6,8 @@ Victory Conditions:
 <br/>
 <br/>CASUALTY LIMIT
 <br/>
-<br/>Mission by Trubb for Anrop.se
+<br/>Mission by rund for Anrop.se
+<br/>Scripts and functions borrowed from Trubb and Tuntematon
 "]];
 
 player createDiaryRecord ["Diary",["V. Command & Signal","
