@@ -7,7 +7,7 @@
     //You can use switchcase for different sides if needed
     //ie.
     private ["_marker_prefix", "_marker_count"];
-		_marker_prefix = "oraja";
+		_marker_prefix = "border";
 		_marker_count = 27;
 
 
