@@ -3,8 +3,8 @@ class Header{gameType =  Coop;};
 author = "rund | Anrop.se";
 onLoadName = "";
 briefingName = "";
-loadScreen = "loadscreen.jpg";
-overviewPicture = "loadscreen.jpg";
+loadScreen = "images\loadscreen.jpg";
+overviewPicture = "images\loadscreen.jpg";
 onLoadMission = "";
 overviewText = "";
 
