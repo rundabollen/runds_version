@@ -11,9 +11,10 @@ Victory Conditions:
 
 player createDiaryRecord ["Diary", ["Gameplay settings","
 Medical Settings
-<br/>CONDITION
+<br/>Go here
 <br/>
 <br/Respawn settings
+<br/>
 <br/>
 <br/Other mod settings
 "]];
