@@ -28,16 +28,13 @@ rund_setActiveSwChannelFrequency = {
 };
 
 
-player createDiaryRecord ["Diary", ["Victory Conditions & Credits","
-Victory Conditions:
-<br/>CONDITION
-<br/>
-<br/>CASUALTY LIMIT
-<br/>
-<br/>Mission by rund for Anrop.se
+player createDiaryRecord ["Diary", [" VII. Credits",
+Mission by rund for Anrop.se
+<br/>Original framework by Trubb.
+<br/>Scripts and functions borrowed from: Dahlgren, Trubb, and Tuntematon.
 "]];
 
-player createDiaryRecord ["Diary", ["Gameplay settings","
+player createDiaryRecord ["Diary", ["VI. Gameplay settings","
 Medical Settings
 <br/>Go here
 <br/>
@@ -50,7 +47,9 @@ Medical Settings
 
 
 
-player createDiaryRecord ["Diary", ["Command and Signal"," 
+player createDiaryRecord ["Diary", ["V. Command and Signal","
+	These buttons do not work during safe-start.
+ 	<br/>
 	<br/>Short range:
 	<br/>Alpha 1. - Ch.1 -
 	<execute expression=""[0] call rund_setActiveSwChannel;"">Set SR Primary.</execute> 
@@ -71,7 +70,7 @@ player createDiaryRecord ["Diary", ["Command and Signal","
 	<execute expression=""[7, '70.0'] call rund_setActiveSwChannelFrequency; [6] call rund_setActiveAdditionalSwChannel;"">Set SR Additional.</execute>
 "]];
 
-player createDiaryRecord ["Diary",["IV. Service & Support","
+player createDiaryRecord ["Diary",["IV. Support and Assets","
 a. Equipment
 <br/>How much ammo?
 <br/>Utility equipment?
@@ -89,7 +88,7 @@ player createDiaryRecord ["Diary",["III. Mission","
 THE COMBAT TASK
 "]];
 
-player createDiaryRecord ["Diary",["IIB. Friendly Forces","
+player createDiaryRecord ["Diary",["IIB.Friendly Forces","
 WHAT FRIENDLY FORCES THERE ARE
 "]];
 
