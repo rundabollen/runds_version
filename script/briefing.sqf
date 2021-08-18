@@ -28,11 +28,14 @@ rund_setActiveSwChannelFrequency = {
 };
 
 
-player createDiaryRecord ["Diary", [" VII. Credits",
+
+
+player createDiaryRecord ["Diary", ["VII. Credits.","
 Mission by rund for Anrop.se
 <br/>Original framework by Trubb.
 <br/>Scripts and functions borrowed from: Dahlgren, Trubb, and Tuntematon.
 "]];
+
 
 player createDiaryRecord ["Diary", ["VI. Gameplay settings","
 Medical Settings
