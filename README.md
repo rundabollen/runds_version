@@ -1,3 +1,12 @@
+### Briefing
+Includes clickable buttons for changing radio channels, frequencies, and stereo settings. Only works AFTER briefing phase. Make sure that the frequencies match those in `cba_settings.sqf`.
+
+### combatzone
+Script to create a polygon limiting the play-area. Original by Tuntematon of Arma Finland. Adjust `_marker_count` in `script\combatzone.sqf` and place an equal amount of markers named `border_n`.
+
+### radioactions
+ACE self-interactions to set the stereo settings of player's radios.
+
 ### trubb_fnc_spawnGroup
 A function that lets you spawn predefined groups of units and have them move towards a target area.  
 
@@ -33,8 +42,6 @@ To use place a trigger covering the soldiers that are to be affected, set it to 
 
 The condition can be for example a trigger: in the trigger you placed put ```triggerActivated yourtrigger``` or your custom condition as what activates the functions.
 
-### combatzone
-Script to create a polygon limiting the play-area. Original by Tuntematon of Arma Finland. Adjust `_marker_count` in `script\combatzone.sqf` and place an equal amount of markers named `border_n`.
 
 ### tun_loadscreen
 A script creating a short wait time between loading screen and mission start to accomodate for players having varying computers and internet connections. Disabled in singleplayer for testing purposes.
