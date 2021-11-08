@@ -159,6 +159,6 @@ force tun_respawn_time_civ = 15;                                    // Time in M
 force tun_respawn_time_east = 15;                                    // Time in MINUTES
 force tun_respawn_time_guer = 15;                                   // Time in MINUTES
 force tun_respawn_time_west = 15;                                   // Time in MINUTES
-force tun_respawn_use_gearscript = false;                           // Wether or not to use AFI gearscript ?? How use saved gear instead ??
+force tun_respawn_use_gearscript = "Save gear";                           // Wether or not to use AFI gearscript ?? How use saved gear instead ??
 force tun_respawn_waiting_area_range = 100;							// diameter of waiting area in meters
 force tun_respawn_forced_respawn = false;							// "Only forced respawn (scripted) no timed waves!
